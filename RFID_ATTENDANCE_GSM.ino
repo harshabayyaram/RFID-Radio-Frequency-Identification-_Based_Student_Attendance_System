@@ -1,12 +1,12 @@
 #include <SPI.h>
 #include <MFRC522.h>
 
-////gsm
-//#include <SoftwareSerial.h>
-//SoftwareSerial mySerial(1, 0);
-//char msg;
-//char call;
-////gsm
+//gsm
+#include <SoftwareSerial.h>
+SoftwareSerial mySerial(1, 0);
+char msg;
+char call;
+//gsm
 
 #define SS_PIN 10
 #define RST_PIN 9
@@ -43,9 +43,9 @@ long Roll;//user number
 String BRANCH;
 int ID = 1;
 void setup() {
-//  //gsm
-//  mySerial.begin(9600);
-//  //gsm
+//gsm
+mySerial.begin(9600);
+//gsm
   Serial.begin(9600);
   SPI.begin();
   mfrc522.PCD_Init();
@@ -82,18 +82,18 @@ void loop() {
     j = 0;
     s = 0;
     //gsm
-//    mySerial.println("ATD8977801788;");
-//    mySerial.println("AT+CMGF=1");    //Sets the GSM Module in Text Mode
-//    delay(1000);  // Delay of 1000 milli seconds or 1 second
-//
-//    mySerial.println("AT+CMGS=\"+918977801788\"\r"); // Replace x with mobile number
-//
-//    delay(1000);
-//
-//    delay(100);
-//    mySerial.println("srikanth sir attendance recorded");
-//    mySerial.println((char)26);// ASCII code of CTRL+Z
-//    delay(1000);
+   mySerial.println("ATD8977801788;");
+   mySerial.println("AT+CMGF=1");    //Sets the GSM Module in Text Mode
+   delay(1000);  // Delay of 1000 milli seconds or 1 second
+
+   mySerial.println("AT+CMGS=\"+918977801788\"\r"); // Replace x with mobile number
+
+   delay(1000);
+
+   delay(100);
+   mySerial.println("srikanth sir attendance recorded");
+   mySerial.println((char)26);// ASCII code of CTRL+Z
+   delay(1000);
     //gsm
 //          Serial.println("ATD8977801788;"); // ATDxxxxxxxxxx;
 
@@ -111,18 +111,18 @@ void loop() {
     j = 1;
     s = 1;
 //    //gsm
-//    mySerial.println("ATD8977801788;");
-//    mySerial.println("AT+CMGF=1");    //Sets the GSM Module in Text Mode
-//    delay(1000);  // Delay of 1000 milli seconds or 1 second
-//
-//    mySerial.println("AT+CMGS=\"+918977801788\"\r"); // Replace x with mobile number
-//
-//    delay(1000);
-//
-//    delay(100);
-//    mySerial.println("Harsha attendance recorded");
-//    mySerial.println((char)26);// ASCII code of CTRL+Z
-//    delay(1000);
+   mySerial.println("ATD8977801788;");
+   mySerial.println("AT+CMGF=1");    //Sets the GSM Module in Text Mode
+   delay(1000);  // Delay of 1000 milli seconds or 1 second
+
+   mySerial.println("AT+CMGS=\"+918977801788\"\r"); // Replace x with mobile number
+
+   delay(1000);
+
+   delay(100);
+   mySerial.println("Harsha attendance recorded");
+   mySerial.println((char)26);// ASCII code of CTRL+Z
+   delay(1000);
 //    //gsm
 //          Serial.println("ATD8977801788;"); // ATDxxxxxxxxxx;
 
@@ -140,18 +140,18 @@ void loop() {
     j = 2;
     s = 2;
     //gsm
-//    mySerial.println("ATD8977801788;");
-//    mySerial.println("AT+CMGF=1");    //Sets the GSM Module in Text Mode
-//    delay(1000);  // Delay of 1000 milli seconds or 1 second
-//
-//    mySerial.println("AT+CMGS=\"+918977801788\"\r"); // Replace x with mobile number
-//
-//    delay(1000);
-//
-//    delay(100);
-//    mySerial.println("vinathi attendance recorded");
-//    mySerial.println((char)26);// ASCII code of CTRL+Z
-//    delay(1000);
+   mySerial.println("ATD8977801788;");
+   mySerial.println("AT+CMGF=1");    //Sets the GSM Module in Text Mode
+   delay(1000);  // Delay of 1000 milli seconds or 1 second
+
+   mySerial.println("AT+CMGS=\"+918977801788\"\r"); // Replace x with mobile number
+
+   delay(1000);
+
+   delay(100);
+   mySerial.println("vinathi attendance recorded");
+   mySerial.println((char)26);// ASCII code of CTRL+Z
+   delay(1000);
     //gsm
 //              Serial.println("ATD8977801788;"); // ATDxxxxxxxxxx;
 
@@ -169,18 +169,18 @@ void loop() {
     j = 3;
     s = 3;
     //gsm
-//    mySerial.println("ATD8977801788;");
-//    mySerial.println("AT+CMGF=1");    //Sets the GSM Module in Text Mode
-//    delay(1000);  // Delay of 1000 milli seconds or 1 second
-//
-//    mySerial.println("AT+CMGS=\"+918977801788\"\r"); // Replace x with mobile number
-//
-//    delay(1000);
-//
-//    delay(100);
-//    mySerial.println("sai nanadhini attendance recorded");
-//    mySerial.println((char)26);// ASCII code of CTRL+Z
-//    delay(1000);
+   mySerial.println("ATD8977801788;");
+   mySerial.println("AT+CMGF=1");    //Sets the GSM Module in Text Mode
+   delay(1000);  // Delay of 1000 milli seconds or 1 second
+
+   mySerial.println("AT+CMGS=\"+918977801788\"\r"); // Replace x with mobile number
+
+   delay(1000);
+
+   delay(100);
+   mySerial.println("sai nanadhini attendance recorded");
+   mySerial.println((char)26);// ASCII code of CTRL+Z
+   delay(1000);
     //gsm
 //              Serial.println("ATD8977801788;"); // ATDxxxxxxxxxx;
 
@@ -198,18 +198,18 @@ void loop() {
     j = 4;
     s = 4;
     //gsm
-//    mySerial.println("ATD8977801788;");
-//    mySerial.println("AT+CMGF=1");    //Sets the GSM Module in Text Mode
-//    delay(1000);  // Delay of 1000 milli seconds or 1 second
-//
-//    mySerial.println("AT+CMGS=\"+918977801788\"\r"); // Replace x with mobile number
-//
-//    delay(1000);
-//
-//    delay(100);
-//    mySerial.println("mahesh attendance recorded");
-//    mySerial.println((char)26);// ASCII code of CTRL+Z
-//    delay(1000);
+   mySerial.println("ATD8977801788;");
+   mySerial.println("AT+CMGF=1");    //Sets the GSM Module in Text Mode
+   delay(1000);  // Delay of 1000 milli seconds or 1 second
+
+   mySerial.println("AT+CMGS=\"+918977801788\"\r"); // Replace x with mobile number
+
+   delay(1000);
+
+   delay(100);
+   mySerial.println("mahesh attendance recorded");
+   mySerial.println((char)26);// ASCII code of CTRL+Z
+   delay(1000);
     //gsm
 //              Serial.println("ATD8977801788;"); // ATDxxxxxxxxxx;
 
@@ -227,18 +227,18 @@ void loop() {
     j = 5;
     s = 5;
     //gsm
-//    mySerial.println("ATD8977801788;");
-//    mySerial.println("AT+CMGF=1");    //Sets the GSM Module in Text Mode
-//    delay(1000);  // Delay of 1000 milli seconds or 1 second
-//
-//    mySerial.println("AT+CMGS=\"+918977801788\"\r"); // Replace x with mobile number
-//
-//    delay(1000);
-//
-//    delay(100);
-//    mySerial.println("aakash chandra attendance recorded");
-//    mySerial.println((char)26);// ASCII code of CTRL+Z
-//    delay(1000);
+   mySerial.println("ATD8977801788;");
+   mySerial.println("AT+CMGF=1");    //Sets the GSM Module in Text Mode
+   delay(1000);  // Delay of 1000 milli seconds or 1 second
+
+   mySerial.println("AT+CMGS=\"+918977801788\"\r"); // Replace x with mobile number
+
+   delay(1000);
+
+   delay(100);
+   mySerial.println("aakash chandra attendance recorded");
+   mySerial.println((char)26);// ASCII code of CTRL+Z
+   delay(1000);
     //gsm
 //              Serial.println("ATD8977801788;"); // ATDxxxxxxxxxx;
 
@@ -256,18 +256,18 @@ void loop() {
     j = 6;
     s = 6;
     //gsm
-//    mySerial.println("ATD8977801788;");
-//    mySerial.println("AT+CMGF=1");    //Sets the GSM Module in Text Mode
-//    delay(1000);  // Delay of 1000 milli seconds or 1 second
-//
-//    mySerial.println("AT+CMGS=\"+918977801788\"\r"); // Replace x with mobile number
-//
-//    delay(1000);
-//
-//    delay(100);
-//    mySerial.println("aashritha attendance recorded");
-//    mySerial.println((char)26);// ASCII code of CTRL+Z
-//    delay(1000);
+   mySerial.println("ATD8977801788;");
+   mySerial.println("AT+CMGF=1");    //Sets the GSM Module in Text Mode
+   delay(1000);  // Delay of 1000 milli seconds or 1 second
+
+   mySerial.println("AT+CMGS=\"+918977801788\"\r"); // Replace x with mobile number
+
+   delay(1000);
+
+   delay(100);
+   mySerial.println("aashritha attendance recorded");
+   mySerial.println((char)26);// ASCII code of CTRL+Z
+   delay(1000);
     //gsm
 //              Serial.println("ATD8977801788;"); // ATDxxxxxxxxxx;
 
@@ -285,18 +285,18 @@ void loop() {
     j = 7;
     s = 7;
     //gsm
-//    mySerial.println("ATD8977801788;");
-//    mySerial.println("AT+CMGF=1");    //Sets the GSM Module in Text Mode
-//    delay(1000);  // Delay of 1000 milli seconds or 1 second
-//
-//    mySerial.println("AT+CMGS=\"+918977801788\"\r"); // Replace x with mobile number
-//
-//    delay(1000);
-//
-//    delay(100);
-//    mySerial.println("pawan kalyan attendance recorded");
-//    mySerial.println((char)26);// ASCII code of CTRL+Z
-//    delay(1000);
+   mySerial.println("ATD8977801788;");
+   mySerial.println("AT+CMGF=1");    //Sets the GSM Module in Text Mode
+   delay(1000);  // Delay of 1000 milli seconds or 1 second
+
+   mySerial.println("AT+CMGS=\"+918977801788\"\r"); // Replace x with mobile number
+
+   delay(1000);
+
+   delay(100);
+   mySerial.println("pawan kalyan attendance recorded");
+   mySerial.println((char)26);// ASCII code of CTRL+Z
+   delay(1000);
     //gsm
 //              Serial.println("ATD8977801788;"); // ATDxxxxxxxxxx;
 
@@ -314,18 +314,18 @@ void loop() {
     j = 8;
     s = 8;
     //gsm
-//    mySerial.println("ATD8977801788;");
-//    mySerial.println("AT+CMGF=1");    //Sets the GSM Module in Text Mode
-//    delay(1000);  // Delay of 1000 milli seconds or 1 second
-//
-//    mySerial.println("AT+CMGS=\"+918977801788\"\r"); // Replace x with mobile number
-//
-//    delay(1000);
-//
-//    delay(100);
-//    mySerial.println("nani attendance recorded");
-//    mySerial.println((char)26);// ASCII code of CTRL+Z
-//    delay(1000);
+   mySerial.println("ATD8977801788;");
+   mySerial.println("AT+CMGF=1");    //Sets the GSM Module in Text Mode
+   delay(1000);  // Delay of 1000 milli seconds or 1 second
+
+   mySerial.println("AT+CMGS=\"+918977801788\"\r"); // Replace x with mobile number
+
+   delay(1000);
+
+   delay(100);
+   mySerial.println("nani attendance recorded");
+   mySerial.println((char)26);// ASCII code of CTRL+Z
+   delay(1000);
     //gsm
 //              Serial.println("ATD8977801788;"); // ATDxxxxxxxxxx;
 
@@ -343,18 +343,18 @@ void loop() {
     j = 9;
     s = 9;
     //gsm
-//    mySerial.println("ATD8977801788;");
-//    mySerial.println("AT+CMGF=1");    //Sets the GSM Module in Text Mode
-//    delay(1000);  // Delay of 1000 milli seconds or 1 second
-//
-//    mySerial.println("AT+CMGS=\"+918977801788\"\r"); // Replace x with mobile number
-//
-//    delay(1000);
-//
-//    delay(100);
-//    mySerial.println("yesh attendance recorded");
-//    mySerial.println((char)26);// ASCII code of CTRL+Z
-//    delay(1000);
+   mySerial.println("ATD8977801788;");
+   mySerial.println("AT+CMGF=1");    //Sets the GSM Module in Text Mode
+   delay(1000);  // Delay of 1000 milli seconds or 1 second
+
+   mySerial.println("AT+CMGS=\"+918977801788\"\r"); // Replace x with mobile number
+
+   delay(1000);
+
+   delay(100);
+   mySerial.println("yesh attendance recorded");
+   mySerial.println((char)26);// ASCII code of CTRL+Z
+   delay(1000);
     //gsm
 //              Serial.println("ATD8977801788;"); // ATDxxxxxxxxxx;
 
@@ -371,19 +371,19 @@ void loop() {
     BRANCH = "ECE D";
     j = 10;
     s = 10;
-    //gsm
-//    mySerial.println("ATD8977801788;");
-//    mySerial.println("AT+CMGF=1");    //Sets the GSM Module in Text Mode
-//    delay(1000);  // Delay of 1000 milli seconds or 1 second
-//
-//    mySerial.println("AT+CMGS=\"+918977801788\"\r"); // Replace x with mobile number
-//
-//    delay(1000);
-//
-//    delay(100);
-//    mySerial.println("prabhas attendance recorded");
-//    mySerial.println((char)26);// ASCII code of CTRL+Z
-//    delay(1000);
+    gsm
+   mySerial.println("ATD8977801788;");
+   mySerial.println("AT+CMGF=1");    //Sets the GSM Module in Text Mode
+   delay(1000);  // Delay of 1000 milli seconds or 1 second
+
+   mySerial.println("AT+CMGS=\"+918977801788\"\r"); // Replace x with mobile number
+
+   delay(1000);
+
+   delay(100);
+   mySerial.println("prabhas attendance recorded");
+   mySerial.println((char)26);// ASCII code of CTRL+Z
+   delay(1000);
     //gsm
 //              Serial.println("ATD8977801788;"); // ATDxxxxxxxxxx;
 
@@ -401,18 +401,18 @@ void loop() {
     j = 11;
     s = 11;
     //gsm
-//    mySerial.println("ATD8977801788;");
-//    mySerial.println("AT+CMGF=1");    //Sets the GSM Module in Text Mode
-//    delay(1000);  // Delay of 1000 milli seconds or 1 second
-//
-//    mySerial.println("AT+CMGS=\"+918977801788\"\r"); // Replace x with mobile number
-//
-//    delay(1000);
-//
-//    delay(100);
-//    mySerial.println("nagarjuna attendance recorded");
-//    mySerial.println((char)26);// ASCII code of CTRL+Z
-//    delay(1000);
+   mySerial.println("ATD8977801788;");
+   mySerial.println("AT+CMGF=1");    //Sets the GSM Module in Text Mode
+   delay(1000);  // Delay of 1000 milli seconds or 1 second
+
+   mySerial.println("AT+CMGS=\"+918977801788\"\r"); // Replace x with mobile number
+
+   delay(1000);
+
+   delay(100);
+   mySerial.println("nagarjuna attendance recorded");
+   mySerial.println((char)26);// ASCII code of CTRL+Z
+   delay(1000);
     //gsm
 //              Serial.println("ATD8977801788;"); // ATDxxxxxxxxxx;
 
